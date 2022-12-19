@@ -14,5 +14,9 @@ class TipoApuesta(models.Model):
 class Apuesta(BaseModel):
     usuario = models.ForeignKey(Usuarios, on_delete = models.CASCADE)
     partido = models.ForeignKey(Partidos, on_delete = models.CASCADE)
-    tipo_apuesta = models.ForeignKey(TipoApuesta, on_delete = models.CASCADE)
+    goles_equipo_local = models.IntegerField(verbose_name = _("Goles Equipo Local"), default=0)
+    goles_equipo_visitante = models.IntegerField(verbose_name = _("Goles Equipo Visitante"), default=0)
+    tarjetas_amarillas = models.IntegerField(verbose_name = _("Tarjetas Amarillas"), default=0)
+    tarjetas_rojas = models.IntegerField(verbose_name = _("Tarjetas Rojas"), default=0)
+    cantidad_goles = models.IntegerField(verbose_name = _("Tarjetas Rojas"), default=0)
     estado = models.ForeignKey(Estado, on_delete = models.CASCADE, blank=True, null=True)
