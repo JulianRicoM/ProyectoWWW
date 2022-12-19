@@ -1,0 +1,110 @@
+.u-section-1 .u-sheet-1 {
+  min-height: 793px;
+}
+
+.u-section-1 .u-form-1 {
+  height: 758px;
+  --thumb-color: #478ac9;
+  --thumb-hover-color: #77aad9;
+  --track-color: #c0c0c0;
+  --track-active-color: #478ac9;
+  margin: 45px 256px 60px 243px;
+}
+
+.u-section-1 .u-input-1 {
+  height: 46px;
+}
+
+.u-section-1 .u-form-group-2 {
+  margin-left: 0;
+}
+
+.u-section-1 .u-input-2 {
+  height: 46px;
+}
+
+.u-section-1 .u-text-1 {
+  margin-left: 0;
+}
+
+.u-section-1 .u-form-group-4 {
+  --progress: 0%;
+  margin-bottom: 10px !important;
+}
+
+.u-section-1 .u-input-3 {
+  height: 46px;
+}
+
+.u-section-1 .u-form-group-5 {
+  --progress: 0%;
+}
+
+.u-section-1 .u-input-4 {
+  height: 46px;
+}
+
+.u-section-1 .u-line-1 {
+  height: 0;
+}
+
+.u-section-1 .u-text-2 {
+  margin-left: 0;
+}
+
+.u-section-1 .u-form-group-8 {
+  --progress: 0%;
+}
+
+.u-section-1 .u-input-5 {
+  height: 46px;
+}
+
+.u-section-1 .u-form-group-9 {
+  --progress: 0%;
+}
+
+.u-section-1 .u-input-6 {
+  height: 46px;
+}
+
+.u-section-1 .u-form-group-10 {
+  --progress: 0%;
+}
+
+.u-section-1 .u-input-7 {
+  height: 46px;
+}
+
+.u-section-1 .u-btn-1 {
+  padding: 10px 1px 10px 0;
+}
+
+@media (max-width: 1199px) {
+  .u-section-1 .u-form-1 {
+    width: 586px;
+    margin-left: 143px;
+    margin-right: 156px;
+  }
+}
+
+@media (max-width: 991px) {
+  .u-section-1 .u-form-1 {
+    margin-left: 33px;
+    margin-right: 46px;
+  }
+}
+
+@media (max-width: 767px) {
+  .u-section-1 .u-form-1 {
+    width: 540px;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+@media (max-width: 575px) {
+  .u-section-1 .u-form-1 {
+    width: 340px;
+  }
+}

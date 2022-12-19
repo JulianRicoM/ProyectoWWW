@@ -39,7 +39,7 @@ def BetList(request):
 @api_view(['POST'])
 def CreateBet(request):
     serializer = apuestaSerializer(data=request.data)
-
+    
     if serializer.is_valid():
         serializer.save()
         return Response(status=status.HTTP_201_CREATED)

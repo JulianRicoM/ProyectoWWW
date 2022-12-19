@@ -1,0 +1,193 @@
+{% load static %}
+<!DOCTYPE html>
+<html style="font-size: 16px;" lang="es">
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8">
+  <meta name="keywords" content="">
+  <meta name="description" content="">
+  <title>Apuestas</title>
+  <link rel="stylesheet" href="{% static 'nicepage.css' %}" media="screen">
+  <link rel="stylesheet" href="{% static 'Apuestas.css' %}" media="screen">
+  <script class="u-script" type="text/javascript" src="{% static 'jquery.js' %}" defer=""></script>
+  <script class="u-script" type="text/javascript" src="{% static 'nicepage.js' %}" defer=""></script>
+  <meta name="generator" content="Nicepage 5.1.5, nicepage.com">
+  <meta name="referrer" content="origin">
+  <link id="u-theme-google-font" rel="stylesheet"
+    href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i">
+
+
+  <script type="application/ld+json">{
+		"@context": "http://schema.org",
+		"@type": "Organization",
+		"name": "",
+		"logo": "images/logo1.PNG"
+}</script>
+  <meta name="theme-color" content="#478ac9">
+  <meta property="og:title" content="Apuestas">
+  <meta property="og:type" content="website">
+</head>
+
+<body class="u-body u-xl-mode" data-lang="es">
+  <header class="u-clearfix u-header u-palette-1-base u-header" id="sec-66c6">
+    <div class="u-clearfix u-sheet u-sheet-1">
+      <a href="https://nicepage.com" class="u-image u-logo u-image-1" data-image-width="269" data-image-height="256">
+        <img src="{% static 'images/logo1.PNG' %}" class="u-logo-image u-logo-image-1">
+      </a>
+      <nav class="u-menu u-menu-one-level u-offcanvas u-menu-1">
+        <div class="menu-collapse"
+          style="font-size: 1rem; letter-spacing: 0px; font-weight: 700; text-transform: uppercase;">
+          <a class="u-button-style u-custom-active-border-color u-custom-active-color u-custom-border u-custom-border-color u-custom-borders u-custom-hover-border-color u-custom-hover-color u-custom-left-right-menu-spacing u-custom-padding-bottom u-custom-text-active-color u-custom-text-color u-custom-text-hover-color u-custom-top-bottom-menu-spacing u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base"
+            href="#">
+            <svg class="u-svg-link" viewBox="0 0 24 24">
+              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#menu-hamburger"></use>
+            </svg>
+            <svg class="u-svg-content" version="1.1" id="menu-hamburger" viewBox="0 0 16 16" x="0px" y="0px"
+              xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
+              <g>
+                <rect y="1" width="16" height="2"></rect>
+                <rect y="7" width="16" height="2"></rect>
+                <rect y="13" width="16" height="2"></rect>
+              </g>
+            </svg>
+          </a>
+        </div>
+        <div class="u-custom-menu u-nav-container">
+          <ul class="u-nav u-spacing-30 u-unstyled u-nav-1">
+            <li class="u-nav-item"><a
+                class="u-border-2 u-border-active-palette-1-base u-border-hover-palette-1-base u-border-no-left u-border-no-right u-border-no-top u-button-style u-nav-link u-text-active-white u-text-hover-palette-4-dark-1 u-text-white"
+                href="home" style="padding: 20px 96px;">Home</a>
+            </li>
+            <li class="u-nav-item"><a
+                class="u-border-2 u-border-active-palette-1-base u-border-hover-palette-1-base u-border-no-left u-border-no-right u-border-no-top u-button-style u-nav-link u-text-active-white u-text-hover-palette-4-dark-1 u-text-white"
+                href="apuestas" style="padding: 20px 96px;">Apuestas</a>
+            </li>
+            <li class="u-nav-item"><a
+                class="u-border-2 u-border-active-palette-1-base u-border-hover-palette-1-base u-border-no-left u-border-no-right u-border-no-top u-button-style u-nav-link u-text-active-white u-text-hover-palette-4-dark-1 u-text-white"
+                href="resultados" style="padding: 20px 96px;">Resultados</a>
+            </li>
+          </ul>
+        </div>
+        <div class="u-custom-menu u-nav-container-collapse">
+          <div class="u-black u-container-style u-inner-container-layout u-opacity u-opacity-95 u-sidenav">
+            <div class="u-inner-container-layout u-sidenav-overflow">
+              <div class="u-menu-close"></div>
+              <ul class="u-align-center u-nav u-popupmenu-items u-unstyled u-nav-2">
+                <li class="u-nav-item"><a class="u-button-style u-nav-link" href="Home.html">Home</a>
+                </li>
+                <li class="u-nav-item"><a class="u-button-style u-nav-link" href="Apuestas.html">Apuestas</a>
+                </li>
+                <li class="u-nav-item"><a class="u-button-style u-nav-link" href="Resultados.html">Resultados</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="u-black u-menu-overlay u-opacity u-opacity-70"></div>
+        </div>
+      </nav>
+    </div>
+  </header>
+  <section class="u-clearfix u-section-1" id="sec-afd3">
+    <div class="u-clearfix u-sheet u-sheet-1">
+      <div class="u-align-left u-form u-form-1">
+        <form action="http://127.0.0.1:8000/apuestas/" method="post"
+          class="u-clearfix u-form-spacing-10 u-form-vertical u-inner-form" source="email" name="form"
+          style="padding: 10px;">
+          <div class="u-form-group u-form-name">
+            <label for="name-ca92" class="u-label">Cedula</label>
+            <input type="text" placeholder="Introduzca su cedula" id="name-ca92" name="documento"
+              class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white u-input-1" required="">
+          </div>
+          <div class="u-form-group u-form-select u-form-group-2">
+            <label for="select-39d1" class="u-label">Seleccionar partido</label>
+            <div class="u-form-select-wrapper">
+              <select id="select-39d1" name="partido"
+                class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white u-input-2">
+                <option value="- - seleccionar - -">- - seleccionar - -</option>
+                <option value="Argentina vs Francia">Argentina vs Francia</option>
+                <option value="Croacia vs Marruecos">Croacia vs Marruecos</option>
+                <option value="Argentina vs Holanda">Argentina vs Holanda</option>
+                <option value="Marruecos vs Portugal">Marruecos vs Portugal</option>
+              </select>
+              <svg class="u-caret u-caret-svg" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="16px" height="16px"
+                viewBox="0 0 16 16" style="fill:currentColor;" xml:space="preserve">
+                <polygon class="st0" points="8,12 2,4 14,4 "></polygon>
+              </svg>
+            </div>
+          </div>
+          <h4 class="u-form-group u-form-text u-text u-text-1">Introduzca el resultado del partido seleccionado</h4>
+          <div class="u-form-group u-form-number u-form-number-layout-number u-form-partition-factor-2 u-form-group-4">
+            <label for="number-e60a" class="u-label">Goles Equipo 1</label>
+            <div class="u-input-row">
+              <input value="0" min="0" max="100" step="1" type="number" placeholder="" id="number-e60a" name="Marcador equipo local"
+                class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-number u-white u-input-3">
+            </div>
+          </div>
+          <div class="u-form-group u-form-number u-form-number-layout-number u-form-partition-factor-2 u-form-group-5">
+            <label for="number-82e9" class="u-label">Goles Equipo 2</label>
+            <div class="u-input-row">
+              <input value="0" min="0" max="100" step="1" type="number" placeholder="" id="number-82e9" name="Marcador equipo visitante"
+                class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white u-input-4">
+            </div>
+          </div>
+          <div class="u-border-3 u-border-grey-dark-1 u-form-group u-form-line u-line u-line-horizontal u-line-1"></div>
+          <h4 class="u-form-group u-form-text u-text u-text-2"> Extra</h4>
+          <div class="u-form-group u-form-number u-form-number-layout-number u-form-group-8">
+            <label for="number-983f" class="u-label">Numero de tarjetas amarillas</label>
+            <div class="u-input-row">
+              <input value="0" min="0" max="100" step="1" type="number" placeholder="" id="number-983f" name="Tarjetas amarillas"
+                class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white u-input-5">
+            </div>
+          </div>
+          <div class="u-form-group u-form-number u-form-number-layout-number u-form-group-9">
+            <label for="number-87c4" class="u-label">Numero de Tarjetas rojas</label>
+            <div class="u-input-row">
+              <input value="0" min="0" max="100" step="1" type="number" placeholder="" id="number-87c4" name="Tarjetas rojas"
+                class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white u-input-6">
+            </div>
+          </div>
+          <div class="u-form-group u-form-number u-form-number-layout-number u-form-group-10">
+            <label for="number-aec2" class="u-label">Cantidad de Goles en el partido</label>
+            <div class="u-input-row">
+              <input value="0" min="0" max="100" step="1" type="number" placeholder="" id="number-aec2" name="Total de goles"
+                class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white u-input-7">
+            </div>
+          </div>
+          <div class="u-align-left u-form-group u-form-submit">
+            <a href="#" class="u-btn u-btn-submit u-button-style u-btn-1">Enviar</a>
+            <input type="submit" value="submit" class="u-form-control-hidden">
+          </div>
+          <div class="u-form-send-message u-form-send-success"> Gracias! Tu mensaje ha sido enviado. </div>
+          <div class="u-form-send-error u-form-send-message"> No se puede enviar su mensaje. Por favor, corrija los
+            errores y vuelva a intentarlo. </div>
+          <input type="hidden" value="" name="recaptchaResponse">
+          <input type="hidden" name="formServices" value="f37c75c48cab170aa98b8f4c6c6d7e1e">
+        </form>
+      </div>
+    </div>
+  </section>
+
+
+  <footer class="u-align-center u-clearfix u-container-align-center u-footer u-palette-1-base u-footer" id="sec-fe39">
+    <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
+      <img class="u-image u-image-default u-image-1" src="{% static 'images/foot.PNG' %}" alt="" data-image-width="753"
+        data-image-height="145">
+    </div>
+  </footer>
+  <section class="u-backlink u-clearfix u-grey-80">
+    <a class="u-link" href="https://nicepage.com/website-templates" target="_blank">
+      <span>Website Templates</span>
+    </a>
+    <p class="u-text">
+      <span>created with</span>
+    </p>
+    <a class="u-link" href="" target="_blank">
+      <span>Website Builder Software</span>
+    </a>.
+  </section>
+
+</body>
+
+</html>
