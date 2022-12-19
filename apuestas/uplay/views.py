@@ -3,7 +3,7 @@ from django.shortcuts import render
 
 # Create your views here.
 def home(request):
-    response=requests.get('http://127.0.0.1:8000/usuarios').json()
+    response=requests.get('http://127.0.0.1:8000/partidos/lista').json()
     print(response)
     return render(request, 'Home.html', {'data': response})
 

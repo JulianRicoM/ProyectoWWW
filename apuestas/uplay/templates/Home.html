@@ -12,6 +12,8 @@
   <link rel="stylesheet" href="{% static 'Home.css' %}" media="screen">
   <script class="u-script" type="text/javascript" src="{% static 'jquery.js' %}" defer=""></script>
   <script class="u-script" type="text/javascript" src="{% static 'nicepage.js' %}" defer=""></script>
+  <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}" media="screen">
+  <script class="u-script" type="text/javascript" src="{% static 'js/bootstrap.js' %}" defer=""></script>
   <meta name="generator" content="Nicepage 5.1.5, nicepage.com">
   <link id="u-theme-google-font" rel="stylesheet"
     href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i">
@@ -95,9 +97,9 @@
           <div class="u-layout-row">
             <div class="u-size-30 u-size-60-md">
               <div class="u-layout-row">
-                <div class="u-align-left u-container-style u-image u-layout-cell u-left-cell u-size-60 u-image-1" src=""
+                <div class="u-align-left u-container-style u-image u-layout-cell u-left-cell u-size-60 u-image-1 " src=""
                   data-image-width="573" data-image-height="377">
-                  <div class="u-container-layout u-container-layout-1" src=""></div>
+                  <div class="u-container-layout u-container-layout-1 rounded" src=""></div>
                 </div>
               </div>
             </div>
@@ -105,13 +107,13 @@
               <div class="u-layout-col">
                 <div class="u-align-left u-container-style u-layout-cell u-right-cell u-size-40 u-layout-cell-2">
                   <div class="u-container-layout u-valign-top u-container-layout-2" src="">
-                    <img class="u-expanded-width u-image u-image-2" src="{% static 'images/MandM.PNG' %}"
+                    <img class="u-expanded-width u-image u-image-2 rounded" src="{% static 'images/MandM.PNG' %}"
                       data-image-width="757" data-image-height="426">
                   </div>
                 </div>
                 <div class="u-align-left u-container-style u-layout-cell u-right-cell u-size-20 u-layout-cell-3" src="">
                   <div class="u-container-layout u-container-layout-3">
-                    <img class="u-expanded-height u-image u-image-3" src="{% static 'images/CandM.PNG' %}"
+                    <img class="u-expanded-height u-image u-image-3 rounded" src="{% static 'images/CandM.PNG' %}"
                       data-image-width="775" data-image-height="557">
                   </div>
                 </div>
@@ -124,48 +126,43 @@
   </section>
   <section class="u-align-center u-clearfix u-white u-section-2" id="sec-c280">
     <div class="u-clearfix u-sheet u-sheet-1">
-      <div class="u-expanded-width u-table u-table-responsive u-table-1">
-        <table class="u-table-entity u-table-entity-1">
+      <div class="u-expanded-width">
+        {% for i in data %}
+        <table class="table table-striped">
           <colgroup>
             <col width="33.3%">
             <col width="33.3%">
             <col width="33.400000000000006%">
           </colgroup>
-          <thead class="u-palette-1-base u-table-header u-table-header-1">
+          <thead class="table-primary">
             <tr style="height: 49px;">
               <th class="u-border-1 u-border-palette-4-base u-table-cell">Items</th>
-              <th class="u-border-1 u-border-palette-4-base u-table-cell">Equipo 1</th>
-              <th class="u-border-1 u-border-palette-4-base u-table-cell">Equipo 2</th>
+              <th class="u-border-1 u-border-palette-4-base u-table-cell">{{i.equipo_local}}</th>
+              <th class="u-border-1 u-border-palette-4-base u-table-cell">{{i.equipo_visitante}}</th>
             </tr>
           </thead>
           <tbody class="u-table-body">
-            <tr style="height: 69px;">
-              <td class="u-border-1 u-border-grey-30 u-first-column u-palette-1-light-2 u-table-cell u-table-cell-4">
-                Tarjetas amarillas</td>
-              <td class="u-border-1 u-border-grey-30 u-table-cell">Description</td>
-              <td class="u-border-1 u-border-grey-30 u-table-cell">Description</td>
-            </tr>
-            <tr style="height: 76px;">
-              <td class="u-border-1 u-border-grey-30 u-first-column u-palette-1-light-2 u-table-cell u-table-cell-7">
-                Tarjetas Rojas</td>
-              <td class="u-border-1 u-border-grey-30 u-table-cell">Description</td>
-              <td class="u-border-1 u-border-grey-30 u-table-cell">Description</td>
-            </tr>
             <tr style="height: 76px;">
               <td class="u-border-1 u-border-grey-30 u-first-column u-palette-1-light-2 u-table-cell u-table-cell-10">
                 goles<br>
               </td>
-              <td class="u-border-1 u-border-grey-30 u-table-cell">Description</td>
-              <td class="u-border-1 u-border-grey-30 u-table-cell">Description</td>
+              <td class="u-border-1 u-border-grey-30 u-table-cell">{{i.marcador_local}}</td>
+              <td class="u-border-1 u-border-grey-30 u-table-cell">{{i.marcador_visitante}}</td>
+            </tr>
+            <tr style="height: 69px;">
+              <td class="u-border-1 u-border-grey-30 u-first-column u-palette-1-light-2 u-table-cell u-table-cell-4">
+                Tarjetas amarillas</td>
+              <td class="u-border-1 u-border-grey-30 u-table-cell" colspan="2">{{i.tarjetas_amarillas}}</td>
             </tr>
             <tr style="height: 76px;">
-              <td class="u-border-1 u-border-grey-30 u-first-column u-palette-1-light-2 u-table-cell u-table-cell-13">
-                Resultado</td>
-              <td class="u-border-1 u-border-grey-30 u-table-cell">Description</td>
-              <td class="u-border-1 u-border-grey-30 u-table-cell">Description</td>
+              <td class="u-border-1 u-border-grey-30 u-first-column u-palette-1-light-2 u-table-cell u-table-cell-7">
+                Tarjetas Rojas</td>
+              <td class="u-border-1 u-border-grey-30 u-table-cell" colspan="2">{{i.tarjetas_rojas}}</td>
             </tr>
           </tbody>
         </table>
+        <br>
+        {% endfor %}
       </div>
     </div>
   </section>
@@ -173,7 +170,7 @@
 
   <footer class="u-align-center u-clearfix u-container-align-center u-footer u-palette-1-base u-footer" id="sec-fe39">
     <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
-      <img class="u-image u-image-default u-image-1" src="{% static 'images/foot.PNG' %}" alt="" data-image-width="753"
+      <img class="u-image u-image-default u-image-1 rounded" src="{% static 'images/foot.PNG' %}" alt="" data-image-width="753"
         data-image-height="145">
     </div>
   </footer>

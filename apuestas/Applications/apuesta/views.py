@@ -8,27 +8,33 @@ from .serializer import listaApuestaSerializer, apuestaSerializer, estadoSeriali
 
 # Si el metodo es POST la funcion espera un body de tipo Estado
 # Si el  metodo es GET la funcion retornará una lista de Estados
-class EstatusList(generics.ListCreateAPIView ):
+
+
+class EstatusList(generics.ListCreateAPIView):
     serializer_class = estadoSerializer
     queryset = Estado.objects.all()
-    
+
     def List(self, request):
         queryset = self.get_queryset()
-        serializer = estadoSerializer(queryset, many = True)
+        serializer = estadoSerializer(queryset, many=True)
         return Response(serializer.data)
 
 # Si el metodo es POST la funcion espera un body de tipo TipoApuesta
 # Si el  metodo es GET la funcion retornará una lista de TipoApuesta
-class BetTypeList(generics.ListCreateAPIView ):
+
+
+class BetTypeList(generics.ListCreateAPIView):
     serializer_class = tipoApuestaSerializer
     queryset = TipoApuesta.objects.all()
-    
+
     def List(self, request):
         queryset = self.get_queryset()
-        serializer = tipoApuestaSerializer(queryset, many = True)
+        serializer = tipoApuestaSerializer(queryset, many=True)
         return Response(serializer.data)
-    
+
 # Solo el metodo GET esta permitido, la funcion retornará una lista de Apuestas
+
+
 @api_view(['GET'])
 def BetList(request):
     queryset = Apuesta.objects.filter(is_active=True)
@@ -36,10 +42,19 @@ def BetList(request):
     return Response(serializer.data)
 
 # Solo esta permitido el metodo POST la funcion espera un body de tipo Apuesta y crea la apuesta
+
+
 @api_view(['POST'])
 def CreateBet(request):
-    serializer = apuestaSerializer(data=request.data)
-    
+    data = {"usuario": request.data['usuario'][0],
+            "partido": request.data['partido'][0],
+            "goles_equipo_local": request.data['goles_equipo_local'][0],
+            "goles_equipo_visitante": request.data['goles_equipo_visitante'][0],
+            "tarjetas_amarillas": request.data['tarjetas_amarillas'][0],
+            "tarjetas_rojas": request.data['tarjetas_rojas'][0],
+            "cantidad_goles": request.data['cantidad_goles'][0]
+            }
+    serializer = apuestaSerializer(data=data)
     if serializer.is_valid():
         serializer.save()
         return Response(status=status.HTTP_201_CREATED)
@@ -54,7 +69,9 @@ def CreateBet(request):
 
 # Si el metodo es GET espera el id de la apuesta y retornará los datos de la apuesta
 # Si el metodo es PUT espera el id de la apuesta con un cuerpo de tipo Apuesta y actualizará la apuesta
-# Si el metodo es DELETE espera el id dela apuesta y eliminará la apuesta 
+# Si el metodo es DELETE espera el id dela apuesta y eliminará la apuesta
+
+
 @api_view(['GET', 'PUT', 'DELETE'])
 def BetDetail(request, id):
     try:
@@ -86,5 +103,3 @@ def BetDetail(request, id):
                 'data': 'Ha ocurrido un error por favor revise los datos'
             },
             status=status.HTTP_404_NOT_FOUND)
-
-

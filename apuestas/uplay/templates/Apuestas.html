@@ -12,6 +12,8 @@
   <link rel="stylesheet" href="{% static 'Apuestas.css' %}" media="screen">
   <script class="u-script" type="text/javascript" src="{% static 'jquery.js' %}" defer=""></script>
   <script class="u-script" type="text/javascript" src="{% static 'nicepage.js' %}" defer=""></script>
+  <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}" media="screen">
+  <script class="u-script" type="text/javascript" src="{% static 'js/bootstrap.js' %}" defer=""></script>
   <meta name="generator" content="Nicepage 5.1.5, nicepage.com">
   <meta name="referrer" content="origin">
   <link id="u-theme-google-font" rel="stylesheet"
@@ -95,20 +97,19 @@
           class="u-clearfix u-form-spacing-10 u-form-vertical u-inner-form" source="email" name="form"
           style="padding: 10px;">
           <div class="u-form-group u-form-name">
-            <label for="name-ca92" class="u-label">Cedula</label>
-            <input type="text" placeholder="Introduzca su cedula" id="name-ca92" name="documento"
-              class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white u-input-1" required="">
+            <label for="name-ca92" class="form-label">Cedula</label>
+            <input type="text" placeholder="Introduzca su cedula" id="name-ca92" name="usuario"
+              class="form-control" required="">
           </div>
           <div class="u-form-group u-form-select u-form-group-2">
-            <label for="select-39d1" class="u-label">Seleccionar partido</label>
+            <label for="select-39d1" class="form-label">Seleccionar partido</label>
             <div class="u-form-select-wrapper">
               <select id="select-39d1" name="partido"
-                class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white u-input-2">
+                class="form-control">
                 <option value="- - seleccionar - -">- - seleccionar - -</option>
-                <option value="Argentina vs Francia">Argentina vs Francia</option>
-                <option value="Croacia vs Marruecos">Croacia vs Marruecos</option>
-                <option value="Argentina vs Holanda">Argentina vs Holanda</option>
-                <option value="Marruecos vs Portugal">Marruecos vs Portugal</option>
+                <option value=1>Brazil vs Croacia</option>
+                <option value=2>Argentina vs Holanda</option>
+                <option value=3>Marruecos vs Portugal</option>
               </select>
               <svg class="u-caret u-caret-svg" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
                 xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="16px" height="16px"
@@ -119,51 +120,45 @@
           </div>
           <h4 class="u-form-group u-form-text u-text u-text-1">Introduzca el resultado del partido seleccionado</h4>
           <div class="u-form-group u-form-number u-form-number-layout-number u-form-partition-factor-2 u-form-group-4">
-            <label for="number-e60a" class="u-label">Goles Equipo 1</label>
+            <label for="number-e60a" class="form-label">Goles Equipo 1</label>
             <div class="u-input-row">
-              <input value="0" min="0" max="100" step="1" type="number" placeholder="" id="number-e60a" name="Marcador equipo local"
-                class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-number u-white u-input-3">
+              <input value="0" min="0" max="100" step="1" type="number" placeholder="" id="number-e60a" name="goles_equipo_local"
+                class="form-control">
             </div>
           </div>
           <div class="u-form-group u-form-number u-form-number-layout-number u-form-partition-factor-2 u-form-group-5">
-            <label for="number-82e9" class="u-label">Goles Equipo 2</label>
+            <label for="number-82e9" class="form-label">Goles Equipo 2</label>
             <div class="u-input-row">
-              <input value="0" min="0" max="100" step="1" type="number" placeholder="" id="number-82e9" name="Marcador equipo visitante"
-                class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white u-input-4">
+              <input value="0" min="0" max="100" step="1" type="number" placeholder="" id="number-82e9" name="goles_equipo_visitante"
+                class="form-control">
             </div>
           </div>
           <div class="u-border-3 u-border-grey-dark-1 u-form-group u-form-line u-line u-line-horizontal u-line-1"></div>
           <h4 class="u-form-group u-form-text u-text u-text-2"> Extra</h4>
           <div class="u-form-group u-form-number u-form-number-layout-number u-form-group-8">
-            <label for="number-983f" class="u-label">Numero de tarjetas amarillas</label>
+            <label for="number-983f" class="form-label">Numero de tarjetas amarillas</label>
             <div class="u-input-row">
-              <input value="0" min="0" max="100" step="1" type="number" placeholder="" id="number-983f" name="Tarjetas amarillas"
-                class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white u-input-5">
+              <input value="0" min="0" max="100" step="1" type="number" placeholder="" id="number-983f" name="tarjetas_amarillas"
+                class="form-control">
             </div>
           </div>
           <div class="u-form-group u-form-number u-form-number-layout-number u-form-group-9">
-            <label for="number-87c4" class="u-label">Numero de Tarjetas rojas</label>
+            <label for="number-87c4" class="form-label">Numero de Tarjetas rojas</label>
             <div class="u-input-row">
-              <input value="0" min="0" max="100" step="1" type="number" placeholder="" id="number-87c4" name="Tarjetas rojas"
-                class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white u-input-6">
+              <input value="0" min="0" max="100" step="1" type="number" placeholder="" id="number-87c4" name="tarjetas_rojas"
+              class="form-control">
             </div>
           </div>
           <div class="u-form-group u-form-number u-form-number-layout-number u-form-group-10">
-            <label for="number-aec2" class="u-label">Cantidad de Goles en el partido</label>
+            <label for="number-aec2" class="form-label">Cantidad de Goles en el partido</label>
             <div class="u-input-row">
-              <input value="0" min="0" max="100" step="1" type="number" placeholder="" id="number-aec2" name="Total de goles"
-                class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white u-input-7">
+              <input value="0" min="0" max="100" step="1" type="number" placeholder="" id="number-aec2" name="cantidad_goles"
+              class="form-control">
             </div>
           </div>
           <div class="u-align-left u-form-group u-form-submit">
-            <a href="#" class="u-btn u-btn-submit u-button-style u-btn-1">Enviar</a>
-            <input type="submit" value="submit" class="u-form-control-hidden">
+            <input type="submit" value="enviar" class="btn btn-primary">
           </div>
-          <div class="u-form-send-message u-form-send-success"> Gracias! Tu mensaje ha sido enviado. </div>
-          <div class="u-form-send-error u-form-send-message"> No se puede enviar su mensaje. Por favor, corrija los
-            errores y vuelva a intentarlo. </div>
-          <input type="hidden" value="" name="recaptchaResponse">
-          <input type="hidden" name="formServices" value="f37c75c48cab170aa98b8f4c6c6d7e1e">
         </form>
       </div>
     </div>
@@ -172,7 +167,7 @@
 
   <footer class="u-align-center u-clearfix u-container-align-center u-footer u-palette-1-base u-footer" id="sec-fe39">
     <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
-      <img class="u-image u-image-default u-image-1" src="{% static 'images/foot.PNG' %}" alt="" data-image-width="753"
+      <img class="u-image u-image-default u-image-1 rounded" src="{% static 'images/foot.PNG' %}" alt="" data-image-width="753"
         data-image-height="145">
     </div>
   </footer>
